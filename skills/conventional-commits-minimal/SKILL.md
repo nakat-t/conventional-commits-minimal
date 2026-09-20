@@ -192,5 +192,9 @@ Bad, with the fix:
 
 ## Reference
 
-Full specification: `README.md` at the repository root, or
+Full specification: `reference/SPECIFICATION.md` next to this file (a copy of
+the repository's root `README.md`, bundled so it stays available when this
+skill is installed on its own, e.g. via `npx skills`). When working inside the
+`conventional-commits-minimal` repository itself, the root `README.md` is the
+canonical, up-to-date copy. The project is also published at
 <https://github.com/nakat-t/conventional-commits-minimal>.

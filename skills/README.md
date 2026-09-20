@@ -11,16 +11,31 @@ available.
 
 ## Install
 
-Copy or symlink the `conventional-commits-minimal/` directory into the skills
-location of your agent. Common locations:
+Install the skill from this GitHub repository with
+[`npx skills`](https://github.com/vercel-labs/skills), the CLI for the open
+Agent Skills ecosystem. It supports Claude Code, Cline, and many other agents.
 
-| Agent              | Project-level                          | User-level                       |
-|--------------------|----------------------------------------|----------------------------------|
-| Claude Code        | `.claude/skills/`                      | `~/.claude/skills/`              |
-| Cline              | `.cline/skills/`                       | `~/.cline/skills/`               |
-| Other Agent Skills | consult your agent's documentation     |                                  |
+```sh
+npx skills add nakat-t/conventional-commits-minimal
+```
 
-Example (project-level, Claude Code):
+This repository contains a single skill, so the command above installs it
+directly. You can also point at the skill directory explicitly:
+
+```sh
+npx skills add https://github.com/nakat-t/conventional-commits-minimal/tree/main/skills/conventional-commits-minimal
+```
+
+`npx skills` writes the skill into the location your agent expects (for
+example `.claude/skills/` for Claude Code or `.cline/skills/` for Cline). See
+the [`skills` CLI documentation](https://github.com/vercel-labs/skills) for
+flags such as choosing the target agent or installing at the user level.
+
+### Manual install (alternative)
+
+If you already have this repository cloned locally, you can instead copy or
+symlink the `conventional-commits-minimal/` directory into the skills
+location of your agent:
 
 ```sh
 mkdir -p .claude/skills
@@ -29,7 +44,10 @@ cp -r skills/conventional-commits-minimal .claude/skills/
 
 The skill is self-contained: it does not require the hook to be installed,
 but it will use `hooks/commit-msg.sh` or `hooks/commit-msg.ps1` for
-verification when either is present in the repository.
+verification when either is present in the repository. It also bundles a full
+copy of the specification in `conventional-commits-minimal/reference/`, so
+the AI agent can consult the original text even when only the skill directory
+is installed.
 
 ## Configure the commit message language
 
