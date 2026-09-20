@@ -1,0 +1,3 @@
+fix!: normalize line endings
+
+BREAKING CHANGE: CRLF is no longer preserved.

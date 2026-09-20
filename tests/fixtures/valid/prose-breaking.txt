@@ -1,0 +1,3 @@
+chore: reword the migration guide
+
+This mentions BREAKING CHANGE in prose without a footer separator.

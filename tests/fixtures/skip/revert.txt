@@ -1,0 +1,3 @@
+Revert "feat: add thing"
+
+This reverts commit 0123456789abcdef.

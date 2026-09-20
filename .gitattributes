@@ -1,0 +1,9 @@
+# Shell scripts must keep LF line endings to run on macOS/Linux and in
+# Git for Windows' sh/dash.
+*.sh text eol=lf
+*.ps1 text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+
+# Fixtures that intentionally test CRLF handling.
+tests/fixtures/valid/crlf.txt -text

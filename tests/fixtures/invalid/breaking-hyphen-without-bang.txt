@@ -1,0 +1,3 @@
+fix: reject empty keys
+
+BREAKING-CHANGE: empty keys used to be ignored.

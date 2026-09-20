@@ -1,0 +1,3 @@
+fix!: reject empty config keys
+
+BREAKING-CHANGE: empty keys used to be silently ignored.
