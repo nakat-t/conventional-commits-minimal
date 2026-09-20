@@ -1,5 +1,7 @@
 # Conventional Commits Minimal 1.0.0-beta.1
 
+English | [日本語](./README.ja.md)
+
 ## Summary
 
 Conventional Commits Minimal is a strict subset of
