@@ -1,4 +1,4 @@
-# Conventional Commits Minimal 1.0.0-beta.1
+# Conventional Commits Minimal 1.0.0-beta.2
 
 [English](./README.md) | 日本語
 
