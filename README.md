@@ -1,4 +1,4 @@
-# Conventional Commits Minimal 1.0.0
+# Conventional Commits Minimal 1.0.0-beta.1
 
 ## Summary
 
