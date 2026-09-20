@@ -2,6 +2,22 @@
 
 English | [日本語](./README.ja.md)
 
+## TL;DR
+
+- **Why this spec exists:** Conventional Commits' open-ended list of types and
+  optional scope make people hesitate on every commit; Conventional Commits
+  Minimal removes both sources of hesitation so commit messages are fast and
+  consistent to write.
+- **What it changes, as briefly as possible:** only three types are allowed
+  (`feat`, `fix`, `chore`), an optional `!` marks breaking changes, and scope
+  is removed entirely.
+- Every conforming message stays fully compatible with
+  [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
+- Includes a `commit-msg` [linter for githooks](./hooks/README.md) and an
+  [Agent Skill](./skills/README.md) that teach AI coding agents this
+  specification.
+- The Agent Skill lets you configure the language used for its messages.
+
 ## Summary
 
 Conventional Commits Minimal is a strict subset of

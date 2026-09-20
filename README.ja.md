@@ -2,6 +2,22 @@
 
 [English](./README.md) | 日本語
 
+## TL;DR
+
+- **この規約を作った理由:** Conventional Commits の際限なく増える type のリス
+  トと省略可能な scope は、コミットのたびに迷いを生みます。Conventional
+  Commits Minimal は、この2つの迷いの原因を取り除き、コミットメッセージを素早
+  く一貫性を持って書けるようにします。
+- **できるだけ短く言うと変更内容は:** type を `feat`、`fix`、`chore` の3つに限
+  定し、破壊的変更は任意の `!` で示し、scope は完全に廃止します。
+- 準拠するメッセージはすべて
+  [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/)
+  との互換性を保ちます。
+- githooks 用の `commit-msg` [linter](./hooks/README.md) と、この仕様を AI
+  コーディングエージェントに教える [Agent Skill](./skills/README.md) を含みま
+  す。
+- Agent Skill はメッセージに使う言語を設定できます。
+
 ## 概要
 
 Conventional Commits Minimal は
