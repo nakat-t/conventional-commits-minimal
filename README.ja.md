@@ -263,7 +263,8 @@ release-please などのツールは、他の Conventional Commit と同様に�
   `commit-msg` フックで、POSIX `sh` と PowerShell のスクリプトとして提供され
   ます。
 * [`skills/`](./skills/README.md) — この仕様に従ったコミットメッセージの書き
-  方を AI コーディングエージェントに教える Agent Skill です。
+  方を AI コーディングエージェントに教える Agent Skill です。description と
+  本文に使用する言語はリポジトリ単位で設定できます。
 
 ## ライセンス
 

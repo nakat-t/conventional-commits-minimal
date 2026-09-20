@@ -255,7 +255,8 @@ your software. They'll want to know what's fixed, what breaks, etc.
 * [`hooks/`](./hooks/README.md) — a `commit-msg` hook that validates messages
   against this specification, available as POSIX `sh` and PowerShell scripts.
 * [`skills/`](./skills/README.md) — an Agent Skill that teaches AI coding
-  agents to write commit messages that follow this specification.
+  agents to write commit messages that follow this specification. The language
+  used for the description and body can be configured per repository.
 
 ## License
 

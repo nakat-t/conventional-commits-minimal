@@ -30,3 +30,42 @@ cp -r skills/conventional-commits-minimal .claude/skills/
 The skill is self-contained: it does not require the hook to be installed,
 but it will use `hooks/commit-msg.sh` or `hooks/commit-msg.ps1` for
 verification when either is present in the repository.
+
+## Configure the commit message language
+
+The commit message grammar is fixed, but the natural language of the
+*description* and *body* is chosen per repository. Without any configuration
+the skill writes in English.
+
+### Shared across the repository
+
+Create `.conventional-commits-minimal` at the repository root and commit it, so
+every contributor's agent uses the same language:
+
+```toml
+language = "ja"
+```
+
+The value is a BCP 47 language tag (`en`, `ja`, `fr`, `pt-BR`, `zh-Hant`) or a
+plain language name (`Japanese`).
+
+### Personal override for one clone
+
+```sh
+git config --local conventional-commits-minimal.language ja
+```
+
+This takes precedence over `.conventional-commits-minimal`, and is useful when
+the repository has no shared setting or you need a different language locally.
+An explicit instruction in the conversation overrides both, for that request
+only.
+
+### What the setting does and does not change
+
+Only the description and the body prose are affected. The types `feat`, `fix`,
+`chore`, the `!`, the ASCII colon and space, and footer tokens such as
+`BREAKING CHANGE` or `Refs` are never translated, which keeps every message a
+valid Conventional Commits 1.0.0 message.
+
+The `commit-msg` hook in `../hooks/` validates only structure and accepts any
+language, so no hook change is needed when you set this.
